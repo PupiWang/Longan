@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 # Ubuntu 14.04, Trusty Tahr(可靠的塔尔羊)发行版
 
 # 道客船长荣誉出品
-MAINTAINER Pupi Wang (support@daocloud.io)
+MAINTAINER Pupi Wang (dreamjl@live.cn)
 
 # APT自动安装PHP相关的依赖包,如需其他依赖包在此添加.
 RUN apt-get update && \
@@ -15,10 +15,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 && \
-    curl -sSL https://get.rvm.io | bash -s stable && \
-    source ~/.rvm/scripts/rvm && \
-    rvm install 2.2.2 && \
-    rvm 2.0.0 --default && \
+    curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.2 \
     gem install rails && \
     rails -v
 
