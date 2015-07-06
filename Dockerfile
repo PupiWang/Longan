@@ -3,8 +3,8 @@ MAINTAINER Pupi Wang (dreamjl@live.cn)
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 RUN mkdir /longan
 WORKDIR /longan
-ADD Gemfile /longan/Gemfile
-RUN bundle install
 ADD . /longan
+RUN bundle install
+RUN rails server
 
 EXPOSE 3000
