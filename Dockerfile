@@ -5,7 +5,8 @@ FROM ubuntu:trusty
 MAINTAINER Pupi Wang (dreamjl@live.cn)
 
 # APT自动安装PHP相关的依赖包,如需其他依赖包在此添加.
-RUN apt-get update && \
+RUN bash && \
+    apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl && \
 
@@ -21,4 +22,4 @@ RUN apt-get update && \
     gem install rails && \
     rails -v
 
-EXPOSE 80
+EXPOSE 3000
