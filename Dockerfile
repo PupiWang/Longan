@@ -4,7 +4,7 @@ FROM ubuntu:trusty
 # 道客船长荣誉出品
 MAINTAINER Pupi Wang (dreamjl@live.cn)
 
-# APT自动安装PHP相关的依赖包,如需其他依赖包在此添加.
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         curl && \
