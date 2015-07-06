@@ -1,9 +1,10 @@
-FROM ubuntu:trusty
-# Ubuntu 14.04, Trusty Tahr(可靠的塔尔羊)发行版
-
-# 道客船长荣誉出品
+FROM ruby:2.2.0
 MAINTAINER Pupi Wang (dreamjl@live.cn)
-
-RUN ruby -v && gem -v
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
+RUN mkdir /longan
+WORKDIR /longan
+ADD Gemfile /longan/Gemfile
+RUN bundle install
+ADD . /longan
 
 EXPOSE 3000
