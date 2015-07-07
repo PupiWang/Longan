@@ -5,6 +5,5 @@ RUN mkdir /longan
 WORKDIR /longan
 ADD . /longan
 RUN bundle install
-RUN rails server
 
 EXPOSE 3000
