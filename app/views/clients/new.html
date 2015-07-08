@@ -1,13 +1,8 @@
 <h1>New Client</h1>
-<%= form_for :client do |c| %>
+<%= form_for :client, url: clients_path do |c| %>
 <p>
-    <%= c.label :title %><br>
-    <%= c.text_field :title %>
-</p>
-
-<p>
-    <%= c.label :text %><br>
-    <%= c.text_area :text %>
+    <%= c.label :name %><br>
+    <%= c.text_field :name %>
 </p>
 
 <p>
