@@ -1,0 +1,16 @@
+<h1>New Client</h1>
+<%= form_for :client do |c| %>
+<p>
+    <%= c.label :title %><br>
+    <%= c.text_field :title %>
+</p>
+
+<p>
+    <%= c.label :text %><br>
+    <%= c.text_area :text %>
+</p>
+
+<p>
+    <%= c.submit %>
+</p>
+<% end %>
