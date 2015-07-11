@@ -1,6 +1,8 @@
 FROM ruby:2.2.2
+
 MAINTAINER Pupi Wang (dreamjl@live.cn)
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs libmysqlclient-dev
+
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev libmysqlclient-dev
 
 # 用完包管理器后安排打扫卫生可以显著的减少镜像大小.
 RUN apt-get clean && \
