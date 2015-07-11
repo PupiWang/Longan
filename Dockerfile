@@ -1,4 +1,4 @@
-FROM ruby:2.2.0
+FROM ruby:2.2.2
 MAINTAINER Pupi Wang (dreamjl@live.cn)
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs libmysqlclient-dev
 
