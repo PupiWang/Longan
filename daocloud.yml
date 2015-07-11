@@ -4,7 +4,7 @@ services:
     - mysql
 
 env:
-    - RAILS_ENV=test
+    - MYENV = "hello"
 
 install:
     - echo $MYENV
@@ -26,4 +26,4 @@ script:
     - echo "Run test cases here"
     - echo ""
     - echo "Below shows how to use services, mongodb/mysql/redis are the service host name"
-    - rake db:migrate
+    - rake db:migrate RAILS_ENV=test
