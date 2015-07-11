@@ -15,3 +15,5 @@ ADD . /longan
 RUN bundle install
 
 EXPOSE 3000
+
+CMD ["rails", "s", "-e", "production"]
