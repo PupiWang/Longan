@@ -24,3 +24,4 @@ script:
     - echo "Run test cases here"
     - echo ""
     - echo "Below shows how to use services, mongodb/mysql/redis are the service host name"
+    - RAILS_ENV=test rake db:migrate
