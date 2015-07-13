@@ -6,8 +6,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    @user.save
-    redirect_to @user
+    if @user.save
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -16,6 +19,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, :telephone)
+    params.require(:user).permit(:name, :email, :telephone, :password, :password_confirmation)
   end
 end
