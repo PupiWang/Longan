@@ -16,4 +16,4 @@ RUN bundle install
 
 EXPOSE 3000
 
-CMD ["rails", "s", "-e", "production"]
+CMD ["rails", "s", "-e", "production", "-p", "3000", "-b", "0.0.0.0"]
